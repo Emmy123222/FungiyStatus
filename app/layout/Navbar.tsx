@@ -255,7 +255,7 @@ export default function Navbar() {
                 </div>
               </div>
               <p className="text-xs text-gray-400 mt-4">
-                By connecting a wallet, you agree to Fungily's Terms of Service.
+                By connecting a wallet, you agree to Fungily Terms of Service.
               </p>
             </div>
           )}
@@ -329,7 +329,7 @@ export default function Navbar() {
             </div>
           </div>
           <p className="text-xs text-gray-400 mt-4">
-            By connecting a wallet, you agree to Fungily's Terms of Service.
+            By connecting a wallet, you agree to Fungilys Terms of Service.
           </p>
         </div>
       )}

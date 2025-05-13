@@ -137,7 +137,7 @@ export default function ConnectAccountStatus() {
             {/* Set Wallet (Optional) */}
             <div className="flex items-center justify-between p-4 border border-[#130B22] w-[468px] h-[92px] rounded-[24px] bg-[#130B22]">
               <div className="flex items-center space-x-3">
-                <img src="/icons/sol.png" alt="sol" />
+                <Image src="/icons/sol.png" alt="sol" />
                 <span className="font-medium">
                   Connect Set Wallet (Optional)
                 </span>
@@ -158,7 +158,7 @@ export default function ConnectAccountStatus() {
             {/* Twitter Connection */}
             <div className="flex items-center justify-between p-4 border border-[#130B22] w-[468px] h-[92px] rounded-[24px] bg-[#130B22]">
               <div className="flex items-center space-x-3">
-                <img src="/icons/X.png" alt="X" />
+                <Image src="/icons/X.png" alt="X" />
                 <span className="font-medium">Sign in with: X (Twitter)</span>
               </div>
               {twitterConnecting ? (
