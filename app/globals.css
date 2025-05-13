@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+/* Colors and fonts */
+:root {
+  --background: #140d23;
+  --foreground: #140d23;
+}
+
+/* Theme variable mappings */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Geist", sans-serif;
+}
+
+/* Base styles */
+body {
+  position: relative;
+  background-color: #140d23;
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/icons/backs.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5; /* adjust for desired visibility */
+  pointer-events: none;
+  z-index: -1;
+}
