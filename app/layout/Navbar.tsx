@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "@walletconnect/qrcode-modal";
@@ -191,7 +190,7 @@ export default function Navbar() {
                 <div className="text-xs text-gray-400">Connected</div>
                 <div>{formatAddress(connectedAddress)}</div>
               </div>
-              <img
+              <Image
                 src="/icons/arrow1.png"
                 className={`w-4 h-4 ml-2 transition-transform ${
                   showWalletPopup ? "rotate-180" : ""

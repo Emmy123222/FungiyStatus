@@ -2,14 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { useWallet } from "@/contexts/WalletContext";
+import Image from "next/image";
 
 export default function ConnectAccountStatus() {
-  const {
-    connectedAddress,
-    setConnectedAddress,
-    connectMetaMask,
-    connectWalletConnect,
-  } = useWallet();
+  const { connectedAddress, setConnectedAddress, connectMetaMask } =
+    useWallet();
 
   const [walletConnecting, setWalletConnecting] = useState(true);
   const [walletConnected, setWalletConnected] = useState(false);
@@ -110,7 +107,7 @@ export default function ConnectAccountStatus() {
             {/* Primary Wallet */}
             <div className="flex items-center justify-between p-4 border border-[#130B22] w-[468px] h-[92px] rounded-[24px] bg-[#130B22]">
               <div className="flex items-center space-x-3">
-                <img src="/icons/eth.png" alt="eth" />
+                <Image src="/icons/eth.png" alt="eth" />
                 <div className="flex flex-col items-start">
                   <span className="font-medium">
                     {connectedAddress || "No wallet connected"}
