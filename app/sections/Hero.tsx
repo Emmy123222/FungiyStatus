@@ -2,6 +2,7 @@
 "use client";
 
 import { useWallet } from "@/contexts/WalletContext";
+import Link from "next/link";
 
 export default function Hero() {
   const { connectedAddress, connectMetaMask } = useWallet();
@@ -36,12 +37,13 @@ export default function Hero() {
         </p>
 
         <div className="pt-2">
-          <button
+          <Link
+            href="/connect"
             onClick={handleClick}
             className="px-6 sm:px-8 py-3 bg-gradient-to-r from-[#7B42FF] to-[#B01EFF] text-white rounded-full font-semibold text-sm hover:opacity-90 transition cursor-pointer w-full max-w-[304px] h-[55px]"
           >
             {connectedAddress ? "Check Status" : "Connect Wallet"}
-          </button>
+          </Link>
         </div>
       </div>
 
