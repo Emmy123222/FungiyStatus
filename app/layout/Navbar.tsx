@@ -183,7 +183,6 @@ export default function Navbar() {
     </div>
   );
 
-  // Mobile Menu Component
   const MobileMenu = ({ setIsMobileMenuOpen }: MobileMenuProps) => (
     <div className="md:hidden fixed inset-0 bg-[#0B0713] z-40 pt-16 px-6">
       <div className="flex items-center justify-between">
@@ -229,13 +228,11 @@ export default function Navbar() {
   return (
     <header className="w-full bg-[#140D23] py-4 px-4 sm:px-6 h-[74px] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <img src="/icons/fungily.png" alt="Fungily Logo" className="h-8" />
           <span className="text-white font-semibold text-lg">Fungily</span>
         </Link>
 
-        {/* Mobile Controls */}
         <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={() => {
@@ -304,7 +301,6 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm ">
           <Link
             href="/"
@@ -363,12 +359,10 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <MobileMenu setIsMobileMenuOpen={setIsMobileMenuOpen} />
       )}
 
-      {/* Wallet Popup */}
       {isWalletPopupOpen && <WalletPopup />}
     </header>
   );
